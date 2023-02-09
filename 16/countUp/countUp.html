@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="counter">0</div>
+	<button class="countup" type="button">+1</button>
+	<script>
+		// const counter = document.querySelector('.counter');
+		// // console.log(parseInt(counter.textContent) + 1);
+		// counter.textContent = parseInt(counter.textContent) + 1;
+
+		const countUpButton = document.querySelector('.countup');
+		countUpButton.addEventListener('click', function () {
+			const counter = document.querySelector('.counter');
+			const counterInt = parseInt(counter.textContent);
+			if(counterInt < 10){
+				counter.textContent = counterInt + 1;
+			}else {
+				alert('This counter is full');
+			}
+		})
+	</script>
+</body>
+
+</html>
